@@ -6,7 +6,6 @@ import 'package:toonflix/widgets/Button.dart';
 //   //이러면 required 를 안써도됨
 //   Player();
 // }
-
 void main() {
   // var hong = Player();
 
@@ -95,7 +94,85 @@ class App extends StatelessWidget {
                     textColor: Colors.white,
                   ), // 새로운 클래스를 생성하여 재사용함
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 100,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Wallets",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 36,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    'View All',
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.8),
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                //Wallets의 칸이라오
+                decoration: BoxDecoration(
+                    color: const Color(0xFF1F2123),
+                    borderRadius: BorderRadius.circular(25)),
+                child: Padding(
+                  // Euro 왼쪽 공간임
+                  padding: const EdgeInsets.all(30),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start, //시작점으로 정렬
+                        children: [
+                          const Text(
+                            'Euro',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 32,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          const SizedBox(
+                            // Euro 와 EUR사이의 공간임
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              const Text(
+                                '6 428',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                'EUR',
+                                style: TextStyle(
+                                    color: Colors.white.withOpacity(0.8),
+                                    fontSize: 20),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
