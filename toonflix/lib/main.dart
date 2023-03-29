@@ -124,26 +124,23 @@ class App extends StatelessWidget {
                   amount: '6 428',
                   icon: Icons.euro_rounded,
                   isInverted: false,
+                  order: 1,
                 ),
-                Transform.translate(
-                  offset: const Offset(0, -20), // 이렇게하면 윗 Euro 카드를 덮어버림
-                  child: const CurrencyCard(
-                    name: 'Bitcoin',
-                    code: 'BTC',
-                    amount: '9 785',
-                    icon: Icons.currency_bitcoin,
-                    isInverted: true,
-                  ),
+                const CurrencyCard(
+                  name: 'Bitcoin',
+                  code: 'BTC',
+                  amount: '9 785',
+                  icon: Icons.currency_bitcoin,
+                  isInverted: true,
+                  order: 2,
                 ),
-                Transform.translate(
-                  offset: const Offset(0, -40),
-                  child: const CurrencyCard(
-                    name: 'Dallor',
-                    code: 'USD',
-                    amount: '428',
-                    icon: Icons.attach_money_outlined,
-                    isInverted: false,
-                  ),
+                const CurrencyCard(
+                  name: 'Dollor',
+                  code: 'USD',
+                  amount: '428',
+                  icon: Icons.attach_money_outlined,
+                  isInverted: false,
+                  order: 3,
                 ),
               ],
             ),
