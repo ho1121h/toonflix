@@ -22,7 +22,7 @@ class CurrencyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     //  // 컨테이너를 잘라오자!
     return Transform.translate(
-      offset: order == 1 ? const Offset(0, 0) : Offset(0, (order - 1) * -20),
+      offset: order == 1 ? const Offset(0, 0) : Offset(0, (order - 1) * -20), 
       child: Container(
         // 카드제작
         clipBehavior: Clip.hardEdge, // 로고 밖에 나간것 자르기
